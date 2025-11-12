@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>单页响应式网站</title>
+    <title>IPTV</title>
     <style>
         body {
             margin: 0;
@@ -56,8 +56,24 @@
     <div class="container">
         <img src="100.png" alt="全屏图片" class="full-screen-image">
     </div>
-    <a href="https://ceo.hw88.us/a/UQ9Wqz74" class="whatsapp-button" target="_blank">
-        Whatsapp
+    <a href="https://ceo.hw88.us/a/UQ9Wqz74" class="whatsapp-button" id="whatsapp-button">
+        <!-- 文本内容将通过 JavaScript 动态设置 -->
     </a>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const whatsappButton = document.getElementById('whatsapp-button');
+            const userLanguage = navigator.language || navigator.userLanguage; // 获取用户浏览器语言
+
+            let buttonText = 'Contact us'; // 默认文本（英语）
+            if (userLanguage.startsWith('zh')) {
+                buttonText = '联系我们'; // 中文文本
+            } else if (userLanguage.startsWith('es')) {
+                buttonText = 'Contáctanos'; // 西班牙语文本
+            }
+            // 可以根据需要添加更多语言
+
+            whatsappButton.textContent = buttonText; // 设置按钮文本
+        });
+    </script>
 </body>
 </html>
