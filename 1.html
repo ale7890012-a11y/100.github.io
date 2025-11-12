@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>单页响应式网站</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            min-height: 100vh;
+            overflow: hidden; /* 隐藏 body 的滚动条 */
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow: auto; /* 允许容器内部滚动 */
+            -webkit-overflow-scrolling: touch; /* 使滚动更流畅 (iOS) */
+        }
+
+        .full-screen-image {
+            width: 100%;
+            height: auto; /* 保持图片比例 */
+            display: block;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 50px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            font-size: 16px;
+        }
+
+        /* 手机适配 */
+        @media (max-width: 600px) {
+            .whatsapp-button {
+                bottom: 10px;
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="100.png" alt="全屏图片" class="full-screen-image">
+    </div>
+    <a href="https://ceo.hw88.us/a/UQ9Wqz74" class="whatsapp-button" target="_blank">
+        Whatsapp
+    </a>
+</body>
+</html>
